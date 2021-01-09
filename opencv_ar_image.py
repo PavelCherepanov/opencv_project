@@ -27,8 +27,7 @@ source = cv2.imread(args["source"])
 print("[INFO] Обнаружение маркеров...")
 arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_ARUCO_ORIGINAL)
 arucoParams = cv2.aruco.DetectorParameters_create()
-(corners, ids, rejected) = cv2.aruco.detectMarkers(image, arucoDict,
-	parameters=arucoParams)
+(corners, ids, rejected) = cv2.aruco.detectMarkers(image, arucoDict, parameters=arucoParams)
 
 # если мы не нашли четырех маркеров во входном изображении, то мы не можем
 # применяем нашу технику дополненной реальности
